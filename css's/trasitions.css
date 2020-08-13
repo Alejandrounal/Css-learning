@@ -1,0 +1,161 @@
+button{
+    color: darkmagenta;
+    box-shadow: black;
+    background-color: greenyellow;
+    font-weight: 900;
+    margin: 20px;
+}
+
+/* Transformaciones*/
+
+.division{
+    height: 30vh;
+    width: 80vw;
+    border: solid fuchsia 5px;
+    margin: 20px;
+    padding: 10px 50px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.division div{
+    height: 150px;
+    width:  150px;
+    display: inline-block;
+}
+
+/* Este es para que solo afecte a los hijos de este, pero no a si mismo*/
+.division div:hover{
+    background: chartreuse;
+}
+
+.one{
+    background: blue;
+    transform: translateX(-15%); /*Sirve para hacer que se vaya hacia un lado o el otro*/
+    /* Hacer la trasicion de color que se establece en hover*/
+    transition-property: background;
+    transition-duration: 4s;
+}
+
+.one:active{
+    color: rgb(235, 67, 67);
+
+}
+
+.two{
+    background: rgb(223, 13, 93);
+    /*Para hacer varias transformacione se deben poner estas juntas en la misma linea*/
+    transform: scale(0.5, 0.8) rotateZ(45deg) ;  /* Se puede poner scale en la misma linea, */ 
+    /* Lo primero que se pone es el efecto, lo segundo es la duración y lo ultimo el delay*/
+    transition: border-radius 3s , background 2s 1s ;
+}
+
+.two:hover{
+    border-radius: 50%;
+    top: -20px;
+    transform: translate(10%, -25%), scaleY(0.3);
+}
+
+.three{
+    background: rgb(213, 255, 24);
+    transform: translate(15%, 15%) skewX(15deg); /* De esta forma se pueden poner todos en la misma linea, y skew es para torcerla un poquito */
+    /* Aqui se pueden poner varios pero tabien se consiguen efectos interesantes si no se pone nada*/
+    transition-property: border-radius, background;
+    transition-duration: 4s, 3s; /* Esto permite que los efectos tengan un diferente timing*/   
+    transition-delay: 0.5s;
+}
+
+.three:hover{
+    border-radius: 30%;
+}
+
+
+/* Transiciones*/
+
+.division2{
+    height: 70vh;
+    width: 76vw;
+    border: 10px pink double;
+    margin: 20px;
+}
+
+/* Cuando se pone así, solo afecta a lo que se encuentra dentro de la división de la primera*/ 
+.division2 div{
+    height: 100px;
+    width: 100px;
+    background: cyan;
+    display: inline-block;
+    transition: all 0.5s ease-in-out ; /* La ultima parte es el transition timing function que permite elegir como se mostrara la trasision*/ 
+}
+
+.division2 div:hover{
+    transform: translateY(55vh);
+}
+
+
+
+
+
+/* Animaciones*/
+
+.division3{
+    height: 50vh;
+    width: 76vw;
+    border: 10px pink solid;
+    margin: 20px;
+}
+
+.division3 div{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    color: blanchedalmond;
+}
+
+.transition{
+    background: darkblue;
+    transition: 2s ease-in-out 0.2s;
+    text-align: center;
+}
+.transition:hover{
+    background: teal;
+    transform: translateX(50vw) scale(0.8);
+    border-radius: 50%;
+}
+
+.animation{
+    background: rgb(16, 212, 65);
+    transition: 2s ease-in-out 0.2s;
+    text-align: center;
+    /*Es necesario poner el nombre de la animacion*/ 
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: 5; /* las veces que se quiere que se repita la animación*/
+    animation-delay: 0.5s;
+
+    /* TAmbien se puede poner en la misma linea usando la propiedad move*/
+}
+
+/* Esta es la parte que hace como tal la animacion */
+
+@keyframes move{
+    /* Lo que va a hacer al porcentaje que se esta poniendo*/
+    0%{
+        transform: translateX(30cw) scale(0.5);
+        border-radius: -30%;
+    }
+    50%{
+        transform: translateX(50vw);
+        background: crimson;
+    }
+    75%{
+        transform: translateX(-25vw);
+        background: rgb(169, 226, 13);
+    }
+    100%{
+        transform: translateX(-55vw) scale(1.5);
+        background: rgba(172, 99, 255, 0.61);
+        border-radius: 50%;
+    }
+
+}

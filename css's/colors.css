@@ -1,0 +1,133 @@
+/* Este apartado es para los colores */
+
+
+/* este es para aplicarle el estilo a todo, no solo a los colores*/
+*{
+    color: black;
+    margin: 0;
+}
+
+/* para poner el color de un solo id    ESTE HAHSTAG APLICA PARA ID*/   
+#first{
+    color: blueviolet;
+    background-color: chartreuse;
+    border-style: groove;
+    font-family: cursive;
+    border: 10px;
+    border-radius: 2px;
+    border-width: 30%;
+    border-color: black;   
+}
+
+/*Para aplicar todo el style a todo el cuerpo pero se excluye lo mas especifico*/
+body{
+    background-image: url(./images/colorful-clouds-sunset-hdwplan.jpg) ;
+    font-family: monospace;
+}
+
+/* Este es para aplicar el estilo a toda una pagina PUNTO APLICA PARA CLASE*/ 
+.parra{
+    background-color:rgba(0, 0,0,1); /* El ultimo valor es de la transparencia*/
+    font-style: italic;
+}
+
+/* Para generar los colores esta es una muy buena pagina  coolors.co */
+
+h5{
+    font-size: 60px;
+    font-style: inherit;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-variant: normal;
+    font-stretch: narrower;
+}
+
+
+/* A la externa aun no se le puede asignar porcentajes por que aun no se encuntra contenida dentro de nada*/
+.externa{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    color: black;
+}
+
+/* El tamaño es relativo a el contenedor */
+.interna{
+    width: 50%;
+    height: 30%;
+    background-color: crimson;
+}
+
+/* tener en cuenta que el tamaño de la fuente puede ser absoluto o relativo, 
+para que el tamanó sea relativo al navegador se puede usar porcentaje, em o rem,
+em para que sea relativo al padre, y rem para que sea relativo a la configuracion general. */
+
+
+/*Estos hacer que los tamaños sean relativos al tamaño de la pantalla, es decir se 
+diferencian del porcentaje en que este no depende de lo que se encentre dentro de estos, si no 
+del tamaño de la pantalla en el que se esta visualizando */ 
+
+.banner{
+    width: 50vh;
+    height: 50vh;   
+    background-color: yellow;
+}
+
+.header{
+    width: 30vh;
+    height: 40vh;
+    background-color: rgb(42, 107, 53);
+}
+
+.navbar{
+    background-color: rgb(50, 177, 34);
+    height: 100px; /* Cuando solo se define la altura, toma como si el ancho fuera 100% */
+    font-size: 3rem;
+    color: crimson;
+    font-family:'Dancing Script', cursive; /* El primero es el que se usa usualmente y si no esta en la fuente se pasa al siguiente */
+    text-align: center;
+    border-radius: 30%;
+    box-sizing: border-box; /* Los ca mbios como pdding se aplican adentro de la caja no fuera, sirve para organizrar */
+}
+
+.banner2{
+    background-color: red;
+    min-height: calc(100vh - 100px); /*Esto sirve para hacer una operación, al restarle el tamaño de la pantalla 100 pixeles*/
+    /* La operación sirve para que sean del mismo tamaño */
+}
+
+.vertical{
+    background-color: rgba(20, 180, 129, 0.911);
+    width: 50vh;
+    height: calc(100vh - 100px);   /* Así es como de momento se agregan barras laterales*/
+    font-family: monospace;
+    font-size: 15px;
+    text-align: justify;
+    margin:10px; /*esta tambien se puede especificar de la forma en la que se estaba trabaja el padding*/
+    text-indent: 30px;  /* La sangria*/ 
+    line-height: 2em; /* La separación entre lineas */
+    letter-spacing: 0.1px; /* Separación entre las letras */
+    word-spacing: 4px; /* Separación entre las letras */
+    text-decoration-color: chartreuse;
+    text-decoration: overline;
+    padding: 10px 12px 14px 15px; /* Es la distancia de los elementos o el contenido al borde, se puede poner a si a los 4 al tiempo */
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px; /* para darle una pequeña curvatura al borde*/
+    cursor: pointer; /* Para modificar la imagen del cursor cuanso se pasa por ese elemento */
+    outline: thick;
+    outline-width: 15px;
+    outline-color: chartreuse;
+
+    
+}
+
+.horizontal{
+    width: 100vh;
+    height: 100%;
+    margin-top: calc(-100vh + 70px); /* Esta es una forma de jugar con la distribución de la pantalla */
+    margin-left: 75vh;
+    outline-width: 15px;
+    border-color: black;
+}

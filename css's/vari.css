@@ -1,0 +1,16 @@
+
+:root{
+    --colorPrimario: #e8ec00;  /* Declaración de variables globales, por que esta en root*/
+}
+
+body{
+    background: url(./images/colorful-clouds-sunset-hdwplan.jpg);
+    background-size: cover;
+    color: var(--colorPrimario); /* Aqui se llama la variable del color que se ha escogido*/
+}
+
+div > h1{
+    text-shadow: 10px 20px 10px black; /*Las sombras en las letras*/ 
+    /* Para hacer todo esto es posible utilizar la herramienta que permite generar esto automaticamente box
+    box shadow generator*/
+}

@@ -1,0 +1,39 @@
+.division{
+    height: 300px;
+    width: 100wh; /* Toca especiicar si es vertical o horizontal*/    
+    border: 5px red solid;
+    padding: 5px;
+    border-radius: 15px;
+    overflow: scroll; /* Se se salen las cosas del contenedor, se agrega un scroll. Muy util*/
+}
+
+img{
+    float: left; /* Permite que elemento este al lado de otro elemento*/
+    overflow: hidden;
+    height: 350px;
+
+}
+
+p{
+    clear: right; /* No permite elementos al lado que se escoja, por defecto es both o ambos */    
+}
+
+.div1{
+    height: 40vh;
+    width: 30vh;
+    clear: none;
+    background: darkgoldenrod;
+    float: left;
+}
+
+.div2{
+    height: 40vh;
+    width: 30vh;
+    background:blue;
+    float: left;
+    position: relative; /* Hay varias formas de manejar, pero escencialmente es para posicionar cosas en la pagina*/ 
+    top: 20px;  /* Si se utiliza fixed, este queda fijo en una sola parte, durate toda la pagina*/
+    
+}
+
+

@@ -1,0 +1,200 @@
+body{
+    background: yellow;
+}
+
+h2{
+    font-weight: 400;
+    font-family: cursive;
+    color: deeppink;
+    background-color: floralwhite;
+    text-align: center;
+    text-decoration: overline;   
+}
+
+/*Esto para poder selecciónar que cambiara al ejecutar la pagina en 
+un tipo diferente de paginas*/  
+/* Cuando sea mayor que el valor que se le indica ahi, se utiliza lo que esta aqui adentro, porque se escogio min*/ 
+/* Se inicia aplicando el de afuera*/ /* Es decir que lo que esta adentro solo modifica lo que se especifica que modifique*/
+@media screen and (max-width: 576px) {
+    body{
+        background: red;
+    }
+
+    h2{
+        font-weight: 300;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgba(194, 235, 82, 0.904);
+        background-color: rgb(20, 14, 1);
+        text-align: center;
+    }
+}
+
+/* Así se puede crear un bonito efecto que permite poner en cascada todo, es manejar lo absolutoo y relativo*/
+
+img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.banner{
+    border: red solid 5px;
+    margin: 20px;
+    width: 25vw;
+    height: 70vh;
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+}
+
+/* z-index permite seleccionar la prifundidad frente a los demas elementos*/
+
+.one{
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.two{
+    top: 10%;
+    left: 10%;
+    z-index: -1;
+}
+
+.tree{
+    top: 20%;
+    left: 20%;
+    z-index: -2; 
+}
+
+.banner2{
+    border: red solid 5px;
+    margin: 20px;
+    width: 25vw;
+    height: 70vh;
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+    text-align: justify;
+    align-content: center;
+    overflow: scroll;
+}
+
+
+/* Para poner cosas antes y despues de algun elemento */
+p::before{
+    content: "biches ";
+    text-emphasis: initial;
+    text-transform: uppercase;
+    text-decoration: overline;
+    text-shadow: black;
+    text-size-adjust: 30px;
+    color: lime;
+}
+
+p::after{
+    content: "";
+    display: block;
+    text-decoration: line-through;
+    font-size: 35px;
+    font-stretch: expanded;
+    width: 15px;
+    height: 15px;
+    background: cyan;
+}
+
+.banner3{
+    border: red solid 5px;
+    margin: 20px;
+    width: 25vw;
+    height: 70vh;
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    cursor: col-resize;
+}
+
+.four{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Para centrar una imagen dentro de un contenedor*/
+.ban2{
+    height: 200px;
+    width: 200px;
+    display: block;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ban2::before{      /* Esto no se aplicar directamnte a una imagen */
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: 4px solid rgb(8, 8, 8);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+}
+
+.ban2::after{  /* Esta es tan solo la segunda que se hizo*/
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: darkgray;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: -2;
+    transition: all 0.5s linear; 
+}
+
+/* esto es para que haga alguna accion cuando el mause pasa por encima, la trasicion se define arriba
+aqui se define lo que sucede en la transicion*/
+.ban2:hover::before,
+.ban2:hover::after {
+    top: 10px;
+    left: 10px;
+}
+
+
+/* Esto hace que sea mas especifico, se convirte en descendientes directos*/
+div > h3{
+    color: blue;
+    background: crimson;
+}
+
+/* Tambien aplica para la especifidad de las clases, para que solo afecte a estos que se estan especificando*/
+.ban2 h1{
+    color: green;
+    background-position: 0fr;
+    background: darkblue;
+}
+
+
+/* Aparte de la primera se pueden definir varios tipos de atributos */
+p::first-letter{
+    size: 25px;
+    color: darkmagenta;
+    font-size: 50px;
+}
+
+p:hover{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    color: darkorange;
+    font-size: 12px;
+    background: cyan;
+}
+
+/*   Tambien se pueden utilizar los estilos a todo el docuemto usando root  
+:root{
+    background: chartreuse;
+}*/

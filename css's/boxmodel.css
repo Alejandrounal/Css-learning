@@ -1,0 +1,43 @@
+.bloque{
+    background-color: blue;
+    color: white;
+    margin: 0 auto; /* Ayuda a centrar las cosas, es basicamente como si se le estuviera diciendo que a lo dos lados va a ser del mismo tamaño */ 
+    width: 30vh;
+}
+
+.inline{
+    background-color: red;
+    color: black;
+    display: block; /* Si se pone esta propiedad, se comporta como si fuera inline y viceversa si fuera como bloque*/
+}
+
+body{
+    margin: 0;
+    padding: 0px;
+}
+
+ul li{  /*Se esta haciendo referencia a los elementos de la lista*/
+    list-style-type: lower-alpha; /* Tambien se pueden quitar las marcas con none*/
+}
+
+ul li a{
+    color: chartreuse;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    background: fuchsia;
+    padding: 5px;
+    margin: 10px 10px;
+    display: block;
+    opacity: 0.75; /* por defecto es 1, es como la trasnparencia*/
+    visibility: visible; /* Por defecto es visible, si se cambia a hidden: es como si el elemento desaparaciera*/
+
+}
+
+a{
+    display: inline-block;  /* La propiedad hace que se comporte como un bloque pero en una linea*/
+    background: chocolate;
+    color: darkgreen;
+    font-size: 50px;
+    margin: 10px;
+}

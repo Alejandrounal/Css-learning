@@ -1,0 +1,29 @@
+div{
+    height: 400px;
+    color: rgb(84, 230, 65);
+}
+
+.bigimg{
+    background: url(./images/colorful-clouds-sunset-hdwplan.jpg);
+    background-repeat: round;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medium{
+    background: url("./images/Colorful\ Paintings\ Wallpapers\ \(1\).jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    
+}
+
+.small{
+    background: linear-gradient(to top left, red, blue, yellow ), 
+    url("./images/La_Fuente_de_las_tres_gracias_en_septiembre.jpg") center/cover fixed no-repeat ; /* Es una forma de escribirlo condensado*/
+    /* Se puede poner la catidad de colores que se desee y la dirección en la que se quiere*/
+}
+
